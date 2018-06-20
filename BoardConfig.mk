@@ -16,6 +16,8 @@
 
 DEVICE_PATH := device/xiaomi/phoenix
 
+BUILD_BROKEN_DUP_RULES := true
+
 # Inherit from sm6150-common
 include device/xiaomi/sm6150-common/BoardConfigCommon.mk
 
