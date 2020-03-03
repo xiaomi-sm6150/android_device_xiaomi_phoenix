@@ -10,9 +10,6 @@ PRODUCT_PRODUCT_VNDK_VERSION := current
 # Enforce java interfaces of product partition
 PRODUCT_ENFORCE_PRODUCT_PARTITION_INTERFACE := true
 
-# Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
-
 # Inherit from sm6150-common
 $(call inherit-product, device/xiaomi/sm6150-common/sm6150.mk)
 
