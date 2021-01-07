@@ -42,7 +42,7 @@ using android::base::GetProperty;
 
 constexpr const char *RO_PROP_SOURCES[] = {
     nullptr,   "product.", "product_services.", "odm.",
-    "vendor.", "system.",  "bootimage.",
+    "vendor.", "system.", "system_ext.", "bootimage.",
 };
 
 constexpr const char *BRANDS[] = {
@@ -57,19 +57,17 @@ constexpr const char *PRODUCTS[] = {
 
 constexpr const char *DEVICES[] = {
     "Redmi K30",
-    "POCO X2",
+    "Redmi K30",
 };
 
 constexpr const char *BUILD_DESCRIPTION[] = {
-    "phoenix-user 10 QKQ1.190825.002 V12.0.3.0.QGHCNXM release-keys",
-    "phoenixin-user 10 QKQ1.190825.002 V11.0.11.0.QGHINXM release-keys",
+    "sunfish-user 11 RQ1A.210105.002 6985033 release-keys",
+    "sunfish-user 11 RQ1A.210105.002 6985033 release-keys",
 };
 
 constexpr const char *BUILD_FINGERPRINT[] = {
-    "Redmi/phoenix/phoenix:10/QKQ1.190825.002/V12.0.3.0.QGHCNXM:user/"
-    "release-keys",
-    "POCO/phoenixin/phoenixin:10/QKQ1.190825.002/V11.0.11.0.QGHINXM:user/"
-    "release-keys",
+    "google/sunfish/sunfish:11/RQ1A.210105.002/6985033:user/release-keys",
+    "google/sunfish/sunfish:11/RQ1A.210105.002/6985033:user/release-keys",
 };
 
 constexpr const char *CLIENT_ID[] = {
