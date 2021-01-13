@@ -14,14 +14,14 @@
 # limitations under the License.
 #
 
-# Product launched with 9.0
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
-
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# Setup call gsi keys
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
 # Call the proprietary setup
-$(call inherit-product, vendor/xiaomi/davinci/davinci-vendor.mk)
+$(call inherit-product, vendor/xiaomi/phoenix/phoenix-vendor.mk)
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -119,10 +119,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
-# Camera motor
-PRODUCT_PACKAGES += \
-    vendor.xiaomi.hardware.motor@1.0.vendor
-
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
@@ -151,13 +147,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
 
-# Fingerprint
+# fastbootd
 PRODUCT_PACKAGES += \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.davinci
+    fastbootd
 
+# Fingerprint
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
-    vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 # FM
 PRODUCT_PACKAGES += \
@@ -216,18 +212,23 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/bin/init.qcom.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.post_boot.sh \
     $(LOCAL_PATH)/rootdir/bin/init.qcom.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.sh
 
+# IR
+PRODUCT_PACKAGES += \
+    android.hardware.ir@1.0-impl \
+    android.hardware.ir@1.0-service
+
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/security/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.davinci
+    android.hardware.light@2.0-service.phoenix
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm \
-    vendor.lineage.livedisplay@2.0-service.davinci
+    vendor.lineage.livedisplay@2.0-service.phoenix
 
 # Media
 PRODUCT_PACKAGES += \
@@ -280,13 +281,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
 
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_davinci/android.hardware.nfc.xml \
-    frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_davinci/android.hardware.nfc.ese.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_davinci/android.hardware.nfc.hce.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_davinci/android.hardware.nfc.hcef.xml \
-    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_davinci/android.hardware.nfc.uicc.xml \
-    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_davinci/com.android.nfc_extras.xml \
-    frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_davinci/com.nxp.mifare.xml
+    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_phoenix/android.hardware.nfc.xml \
+    frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_phoenix/android.hardware.nfc.ese.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_phoenix/android.hardware.nfc.hce.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_phoenix/android.hardware.nfc.hcef.xml \
+    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_phoenix/android.hardware.nfc.uicc.xml \
+    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_phoenix/com.android.nfc_extras.xml \
+    frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_phoenix/com.nxp.mifare.xml
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -437,3 +438,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+    
+PRODUCT_BUILD_SUPER_PARTITION := false
+PRODUCT_SHIPPING_API_LEVEL := 29
+PRODUCT_USE_DYNAMIC_PARTITIONS := true

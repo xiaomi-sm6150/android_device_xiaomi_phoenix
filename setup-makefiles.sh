@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=davinci
+DEVICE=phoenix
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks
