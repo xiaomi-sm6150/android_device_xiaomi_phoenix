@@ -1,26 +1,26 @@
 Copyright (C) 2020 The LineageOS Project
+Copyright (C) 2020-2021 Paranoid Android.
 
-Device configuration for Xiaomi Mi 9T/Redmi K20
+Device configuration for Xiaomi Redmi K30 / Poco X2
 =========================================
 
-The Xiaomi Mi 9T/Redmi K20 (codenamed _"davinci"_) is a mid-range smartphone from Xiaomi.
+The Xiaomi Redmi K30 / Poco X2 (codenamed _"phoenix / phoenixin"_) are mid range smartphones from Xiaomi's sub-brand Redmi and Poco, respectively.
 
-It was announced in June 2019. Release date was June 2019.
+Redmi K30 was announced and released in December 2019, while Poco X2 was announced and released in February 2020.
 
 ## Device specifications
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-CPU     | Dual-core 2.2 GHz Kryo 470 Gold & Hexa-core 1.8 GHz Kryo 470 Silver
-Chipset | Qualcomm SDM730 Snapdragon 730
+SoC     | Qualcomm SM6150 Snapdragon 730G
+CPU     | Octa-core (2x2.2 GHz Kryo 470 Gold & 6x1.8 GHz Kryo 470 Silver)
 GPU     | Adreno 618
-Memory  | 6 GB RAM
-Shipped Android Version | 9.0
-Storage | 64/128 GB (UFS 2.0)
-Battery | Non-removable Li-Po 4000 mAh
-Display | 1080 x 2340 pixels, 6.39 inches (~428 ppi pixel density)
-Camera  | Main 48 MP f/1.8, telephoto lens, ultrawide lens, dual-LED (dual tone) flash
+Memory  | 6/8 GB RAM
+Shipped Android Version | 10 with MIUI 11
+Storage | 64/128/256 GB
+Battery | Non-removable Li-Po 4500 mAh battery
+Display | 1080 x 2400 pixels, 20:9 ratio, 6.67 inches, IPS LCD (~386 ppi density)
 
 ## Device picture
 
-![Xiaomi Mi 9T/Redmi K20](https://i01.appmifile.com/webfile/globalimg/products/pc/redmik20/index_slider_1.png "Xiaomi Mi 9T/Redmi K20 in carbon black")
+![Xiaomi Redmi K30](https://xiaomi-mi.com/uploads/CatalogueImage/redmi-k30%20(10)_17912_1577645087.jpg "Xiaomi Redmi K30 in blue")

@@ -65,6 +65,8 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/smcinvoke            0660   system     drmrpc
 /dev/adsprpc-smd          0664   system     system
 /dev/adsprpc-smd-secure   0644   system     system
+/dev/mdss_rotator         0664   system     system
+/dev/cpu_dma_latency      0660   root       system
 
 # qg
 /dev/qg                   0660  system     system
@@ -73,6 +75,12 @@ firmware_directories /vendor/firmware_mnt/image/
 # Elliptic
 /dev/elliptic0            0644   system       system
 /dev/elliptic1            0644   system       system
+
+# TFA
+/dev/tfa_reg              0660   system       system
+/dev/tfa_rw               0660   system       system
+/dev/tfa_rpc              0660   system       system
+/dev/tfa_control          0660   system       system
 
 # QVR
 /dev/qvr_external_sensor_ioctl      0660  system  system
@@ -101,10 +109,15 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/avtimer              0660   system     audio
 
 # NFC permissions
+/dev/nfc-nci              0660    nfc         nfc
 /dev/nq-nci               0660    nfc         nfc
 
 # UIO devices
 /dev/uio0                 0660   system     system
+
+# SPI IR nodes
+/dev/lirc0                0660   system     system
+/dev/spidev0.1            0660  system      system
 
 # SSR devices
 /dev/subsys_*             0640   system     system
@@ -117,6 +130,9 @@ firmware_directories /vendor/firmware_mnt/image/
 
 # FRP
 /dev/block/platform/soc/1d84000.ufshc/by-name/frp       0600   system     system
+
+# This is temporary while using SD card for initial bring-up
+/dev/block/platform/soc/8804000.sdhci/by-name/frp       0600   system     system
 
 # Kmsg device
 /dev/kmsg                 0620   root       system

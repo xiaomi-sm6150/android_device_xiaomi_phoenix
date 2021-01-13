@@ -41,20 +41,11 @@ on init
     chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
     chmod 0660 /dev/cpuset/camera-daemon/tasks
 
-    # Camera motor
-    chown system camera /dev/drv8846_dev
-    chown system camera /dev/akm09970
-    chmod 0660 /dev/drv8846_dev
-    chmod 0660 /dev/akm09970
+on property:ro.product.device=phoenix
+    start vendor.nfc_hal_service
 
-on init && property:ro.boot.hwc=GLOBAL
-    setprop ro.boot.product.hardware.sku davinci
-
-on init && property:ro.boot.hwc=CN
-    setprop ro.boot.product.hardware.sku davinci
-
-on property:ro.boot.product.hardware.sku=davinci
-    enable vendor.nfc_hal_service
+on property:ro.product.device=phoenixin
+    stop vendor.nfc_hal_service
 
 on fs
     mount_all --early
@@ -184,7 +175,6 @@ on charger
     wait /dev/block/platform/soc/1da4000.ufshc/by-name/persist
     mount ext4 /dev/block/bootdevice/by-name/persist /mnt/vendor/persist nosuid nodev barrier=1
 
-    start vendor.hvdcp_opti
     start vendor.thermal-engine
     start vendor.qcom-post-boot
     start vendor.power_off_alarm
@@ -199,12 +189,6 @@ service vendor.thermal-engine /vendor/bin/thermal-engine
     group root
     writepid /dev/cpuset/system-background/tasks
 
-service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
-    class main
-    user root
-    group system wakelock
-    writepid /dev/cpuset/system-background/tasks
-
 service vendor.remosaic_daemon /vendor/bin/remosaic_daemon
     class late_start
     user camera
@@ -216,12 +200,6 @@ service vendor.nv_mac /vendor/bin/nv_mac
     user system
     group system inet net_admin wifi net_raw
     oneshot
-
-service vendor.motor /vendor/bin/hw/vendor.xiaomi.hardware.motor@1.0-service
-    class hal
-    user system
-    group system
-    writepid /dev/cpuset/system-background/tasks
 
 service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
     override

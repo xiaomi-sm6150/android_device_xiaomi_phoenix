@@ -1,1 +1,2 @@
-require version-baseband=4.3.c5-00069,20.10.20
+require version-cn=CN,4.3.c5-00052,20.6.17
+require version-in=INDIA,4.3.c5-00036,V11.0.11.0.QGHINXM
