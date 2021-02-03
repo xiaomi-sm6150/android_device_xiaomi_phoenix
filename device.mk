@@ -161,8 +161,9 @@ PRODUCT_PACKAGES += \
     qcom.fmradio
 
 # Fstab
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    fstab.ramdisk
 
 # GPS
 PRODUCT_PACKAGES += \
