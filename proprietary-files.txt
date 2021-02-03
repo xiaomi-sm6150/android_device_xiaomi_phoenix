@@ -522,28 +522,13 @@ vendor/lib/libllvm-qcom.so
 vendor/lib/libOpenCL.so
 
 # Graphics firmware
-vendor/firmware/a612_rgmu.bin
-vendor/firmware/a612_zap.b00
-vendor/firmware/a612_zap.b01
-vendor/firmware/a612_zap.b02
-vendor/firmware/a612_zap.elf
-vendor/firmware/a612_zap.mdt
 vendor/firmware/a615_zap.b00
 vendor/firmware/a615_zap.b01
 vendor/firmware/a615_zap.b02
 vendor/firmware/a615_zap.elf
 vendor/firmware/a615_zap.mdt
 vendor/firmware/a618_gmu.bin
-vendor/firmware/a630_gmu.bin
 vendor/firmware/a630_sqe.fw
-vendor/firmware/a640_gmu.bin
-vendor/firmware/ipa_fws.b00
-vendor/firmware/ipa_fws.b01
-vendor/firmware/ipa_fws.b02
-vendor/firmware/ipa_fws.b03
-vendor/firmware/ipa_fws.b04
-vendor/firmware/ipa_fws.elf
-vendor/firmware/ipa_fws.mdt
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
@@ -651,11 +636,10 @@ vendor/firmware/ipa_fws.elf
 vendor/firmware/ipa_fws.mdt
 
 # Keymaster
-vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
-vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
 vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
 vendor/lib64/libkeymasterdeviceutils.so
+vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqcbor.so
 vendor/lib64/libqtikeymaster4.so
