@@ -43,6 +43,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sm6150 \
     libkeymaster_messages.vendor:64
 
 # Input
