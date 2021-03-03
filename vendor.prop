@@ -7,6 +7,10 @@ vendor.audio.adm.buffering.ms=6
 vendor.audio.feature.compr_voip.enable=false
 vendor.voice.path.for.pcm.voip=false
 
+# Chipset
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SDM7150
+
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
 
