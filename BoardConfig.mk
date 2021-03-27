@@ -24,11 +24,6 @@ include device/xiaomi/sm6150-common/BoardConfigCommon.mk
 # Inherit from proprietary files
 include vendor/xiaomi/phoenix/BoardConfigVendor.mk
 
-# Audio
-AUDIO_FEATURE_ENABLED_TFA98XX_FEEDBACK := true
-AUDIO_FEATURE_ELLIPTIC_ULTRASOUND_SUPPORT := true
-TARGET_PROVIDES_AUDIO_EXTNS := true
-
 # Assert
 TARGET_OTA_ASSERT_DEVICE := phoenix,phoenixin
 
