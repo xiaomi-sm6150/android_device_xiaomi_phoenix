@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_phoenix.mk
+    $(LOCAL_DIR)/fluid_phoenix.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_phoenix-user \
-    lineage_phoenix-userdebug \
-    lineage_phoenix-eng
+    fluid_phoenix-user \
+    fluid_phoenix-userdebug \
+    fluid_phoenix-eng
