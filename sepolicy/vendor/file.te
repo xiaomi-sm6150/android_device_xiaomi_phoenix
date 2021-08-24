@@ -1,1 +1,2 @@
 type ultrasound_device, dev_type;
+type sysfs_disp_feature, sysfs_type, fs_type;

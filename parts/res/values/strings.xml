@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2018 The LineageOS Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- POCO X2 specific settings -->
+    <string name="device_specific_settings_title">Device-specific settings</string>
+
+    <!-- Display Features -->
+    <string name="disp_features_title">Display features</string>
+    <string name="disp_features_summary">High Brightness Mode, CABC</string>
+    <string name="disp_hbm_title">High Brightness Mode (HBM)</string>
+    <string name="disp_hbm_tile_title">HBM</string>
+    <string name="disp_cabc_title">CABC Mode</string>
+    <string name="disp_features_info">High Brightness Mode (HBM) increases the maximum brightness of the display to improve visibility under sunlight. Increases power consumption.\n\nCABC (Content Adaptive Backlight Control) adjusts display and backlight brightness based on currently shown content, to reduce power consumption without degradation.</string>
+</resources>
