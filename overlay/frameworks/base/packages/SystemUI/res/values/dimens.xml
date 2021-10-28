@@ -29,4 +29,8 @@
 
     <!-- Margin on the left side of the carrier text on Keyguard -->
     <dimen name="keyguard_carrier_text_margin">44px</dimen>
+
+    <!-- Location of physical power button -->
+    <dimen name="physical_power_button_center_screen_location_y">950px</dimen>
+    <dimen name="physical_fingerprint_sensor_center_screen_location_y">950px</dimen>
 </resources>
