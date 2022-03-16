@@ -62,7 +62,7 @@
     <integer name="config_defaultRefreshRate">120</integer>
 
     <!-- Height of the status bar -->
-    <dimen name="status_bar_height_portrait">99px</dimen>
+    <dimen name="status_bar_height">99px</dimen>
 
     <!-- Indicates whether device has a power button fingerprint sensor. -->
     <bool name="config_is_powerbutton_fps">true</bool>
