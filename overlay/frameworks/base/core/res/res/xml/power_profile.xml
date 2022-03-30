@@ -100,10 +100,10 @@
     </array>
 
     <!-- Additional power used when screen is turned on at minimum brightness -->
-    <item name="screen.on">51.04</item>
+    <item name="screen.on.display0">51.04</item>
     <!-- Additional power used when screen is at maximum brightness, compared to
          screen at minimum brightness -->
-    <item name="screen.full">349.13</item>
+    <item name="screen.full.display0">349.13</item>
 
     <!-- Average power used by the camera flash module when on -->
     <item name="camera.flashlight">148.15</item>
