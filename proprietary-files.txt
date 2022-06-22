@@ -56,7 +56,6 @@ vendor/etc/camera/hdr_ui9_params.config
 vendor/etc/camera/lf_facerank_model.bin
 vendor/etc/camera/male_bg.png
 vendor/etc/camera/male_icon.png
-vendor/etc/camera/megviifacepp_0_5_2_model
 vendor/etc/camera/mibokeh_712_opencl.bin
 vendor/etc/camera/mibokeh_712_parameter.bin
 vendor/etc/camera/morpho_lowlight4.0_3hdr_algoup.xml
@@ -176,7 +175,6 @@ vendor/lib64/camera/fdconfigvideolite.bin
 -vendor/lib64/hw/com.qti.chi.override.so
 -vendor/lib64/libFaceGrade.so
 -vendor/lib64/libHalSuperSensorServer.so
--vendor/lib64/libMegviiFacepp-0.5.2.so
 -vendor/lib64/libSuperSensor.so
 -vendor/lib64/libSuperSensorCPU.so
 -vendor/lib64/libVDClearShot.so
@@ -216,7 +214,6 @@ vendor/lib64/camera/fdconfigvideolite.bin
 -vendor/lib64/libcom.qti.chinodeutils.so
 -vendor/lib64/libft2vendor.so
 -vendor/lib64/libhvx_interface.so
--vendor/lib64/libmegface.so
 -vendor/lib64/libmialgo_fs.so
 -vendor/lib64/libmialgo_rfs.so
 -vendor/lib64/libmialgo_sd.so
@@ -248,6 +245,11 @@ vendor/lib64/camera/fdconfigvideolite.bin
 
 # Camera Firmware
 vendor/firmware/CAMERA_ICP.elf
+
+# Camera face detection
+vendor/etc/camera/megviifacepp_0_5_2_model:vendor/etc/camera/facedetectpp_0_5_2_model
+-vendor/lib64/libmegface.so:vendor/lib64/libfacedet.so
+-vendor/lib64/libMegviiFacepp-0.5.2.so:vendor/lib64/libFaceDetectpp-0.5.2.so
 
 # Consumer IR
 -vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sm6150.so
