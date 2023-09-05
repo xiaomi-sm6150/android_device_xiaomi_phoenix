@@ -7,9 +7,6 @@ vendor.audio.adm.buffering.ms=6
 vendor.audio.feature.compr_voip.enable=false
 vendor.voice.path.for.pcm.voip=false
 
-# Crypto
-ro.crypto.volume.filenames_mode=aes-256-cts
-
 # Display
 debug.sf.frame_rate_multiple_threshold=120
 ro.surface_flinger.set_display_power_timer_ms=1000
